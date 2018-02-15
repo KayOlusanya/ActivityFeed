@@ -2,8 +2,10 @@ package com.zone.innovation.activityfeed;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages= {"com.zone.innovation.activityfeed.*"})
 public class ActivityfeedApplication {
 
 	public static void main(String[] args) {
