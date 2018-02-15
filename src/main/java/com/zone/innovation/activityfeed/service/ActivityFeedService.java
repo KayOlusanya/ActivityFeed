@@ -3,6 +3,7 @@ package com.zone.innovation.activityfeed.service;
 import com.zone.innovation.activityfeed.model.ActivityFeed;
 import org.springframework.stereotype.Component;
 
+@Component
 public class ActivityFeedService {
 
 

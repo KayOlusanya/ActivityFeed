@@ -7,7 +7,7 @@ public class ActivityFeed {
     private String description;
     private Long customerId;
     private List<Transaction> transactions;
-    
+
     public Long getId() {
         return id;
     }
