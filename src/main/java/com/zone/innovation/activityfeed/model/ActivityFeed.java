@@ -1,11 +1,13 @@
 package com.zone.innovation.activityfeed.model;
 
+import java.util.List;
+
 public class ActivityFeed {
     private Long id;
     private String description;
     private Long customerId;
-
-
+    private List<Transaction> transactions;
+    
     public Long getId() {
         return id;
     }
@@ -28,5 +30,13 @@ public class ActivityFeed {
 
     public void setCustomerId(Long customerId) {
         this.customerId = customerId;
+    }
+
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public void setTransactions(List<Transaction> transactions) {
+        this.transactions = transactions;
     }
 }
