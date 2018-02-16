@@ -19,9 +19,6 @@ public class ActivityFeedController {
 
     @Autowired
     ActivityFeedService newService;
-    
-    @Autowired
-    FeedRepository feedRepository;
 
     @GetMapping("/activityfeed/{customerid}")
     public @ResponseBody ActivityFeed getFeed(@PathVariable(name = "customerid") long customerId) {
@@ -29,10 +26,9 @@ public class ActivityFeedController {
         return feed;
     }
     
-    @GetMapping("/activityfeed/")
-    public @ResponseBody List<Feed> getFeed(){
-    	List<Feed> feedList = new ArrayList<>();
-    	feedRepository.findAll().forEach(feedList::add);
+    @GetMapping("/customer/{customerid}/activity-feeds/")
+    public @ResponseBody List<Feed> getFeeds(@PathVariable(name = "customerid") long customerId){
+    	List<Feed> feedList = newService.getFeeds(customerId);
     	return feedList;
     }
 }

@@ -1,0 +1,55 @@
+{
+  "activityFeed": [
+    {
+      "id": 1,
+      "timestamp": "1518615151",
+      "category": "VISIT",
+      "alert-type": "COMPLETE",
+      "title": "Your engineer visited today",
+      "visit-engineer": "Joel",
+      "visit-time": "11am",
+      "issueStatus": "resolved",
+      "customer-id": 101
+    },
+    {
+      "id": 4,
+      "timestamp": "1518615151",
+      "category": "VISIT",
+      "alert-type": "INFO",
+      "title": "Your engineer visit is booked",
+      "visit-date": "Tuesday 3rd July",
+      "visit-time": "8am - 1pm",
+      "customer-id": 101
+    },
+    {
+      "id": 2,
+      "timestamp": "1518615151",
+      "category": "METERREAD",
+      "alert-type": "ACTIONNEEDED",
+      "title": "It is time to read your metre",
+      "description": "To keep your energy bills accurate please submit your meter reading",
+      "customer-id": 101
+    },
+    {
+      "id": 3,
+      "timestamp": "1518615151",
+      "category": "TARIFF",
+      "alert-type": "INFO",
+      "title": "Save money by switching tariff",
+      "description": "Looking at your recent energy usage we can see switching can save you money",
+      "customer-id": 101
+    },
+    {
+      "id": 4,
+      "timestamp": "1518615151",
+      "category": "BILL",
+      "alert-type": "ACTIONNEEDED",
+      "title": "Your energy bill is now ready",
+      "customer-id": 101
+    }
+  ],
+  "customer": {
+    "id": 101,
+    "name": "Andy"
+  }
+}
