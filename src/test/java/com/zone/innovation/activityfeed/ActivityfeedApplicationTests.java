@@ -14,27 +14,27 @@ import static org.assertj.core.api.Java6Assertions.assertThat;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ActivityfeedApplicationTests {
 
-	@LocalServerPort
-	private int port;
+    @LocalServerPort
+    private int port;
 
-	@Autowired
-	private TestRestTemplate restTemplate;
+    @Autowired
+    private TestRestTemplate restTemplate;
 
-	@Test
-	public void contextLoads() {
-		//assertThat(controller).isNotNull();
-	}
+    @Test
+    public void contextLoads() {
+        //assertThat(controller).isNotNull();
+    }
 
-	@Test
-	public void requestShouldReturnDefaultMessage() throws Exception {
-		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/activityfeed/1",
-				String.class)).contains("{\"id\":null,\"description\":null,\"customerId\":null,\"transactions\":null}");
-	}
+    @Test
+    public void requestShouldReturnDefaultMessage() throws Exception {
+        assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/activityfeed/1",
+                String.class)).contains("{\"id\":null,\"description\":null,\"customerId\":null,\"transactions\":null}");
+    }
 
-	@Test
-	public void requestShouldReturnStuff() throws Exception {
-		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/activityfeed/1",
-				String.class)).contains("{\"id\":null,\"description\":null,\"customerId\":null,\"transactions\":null}");
-	}
+    @Test
+    public void requestShouldReturnStuff() throws Exception {
+        assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/activityfeed/1",
+                String.class)).contains("{\"id\":null,\"description\":null,\"customerId\":null,\"transactions\":");
+    }
 
 }

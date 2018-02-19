@@ -6,7 +6,7 @@ public class ActivityFeed {
     private Long id;
     private String description;
     private Long customerId;
-    //private List<Transaction> transactions;
+    private List<Feed> transactions;
 
     public Long getId() {
         return id;
@@ -32,11 +32,11 @@ public class ActivityFeed {
         this.customerId = customerId;
     }
 
-    public List<Transaction> getTransactions() {
-        return null;
+    public List<Feed> getTransactions() {
+        return transactions;
     }
 
-    public void setTransactions(List<Transaction> transactions) {
-       // this.transactions = transactions;
+    public void setTransactions(List<Feed> transactions) {
+       this.transactions = transactions;
     }
 }

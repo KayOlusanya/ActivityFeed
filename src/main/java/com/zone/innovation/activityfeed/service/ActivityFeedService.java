@@ -18,6 +18,7 @@ public class ActivityFeedService {
     FeedRepository feedRepository;
 
     public ActivityFeed getFeed(long customerID){List<Feed> feedList = new ArrayList<>();
+
         return new ActivityFeed();
     }
 
@@ -26,4 +27,14 @@ public class ActivityFeedService {
         feedRepository.findAll().forEach(feedList::add);
         return feedList;
     }
+
+
+     public ActivityFeed getActivityFeed(long customerID){
+        List<Feed> feedList = new ArrayList<Feed>();
+        feedRepository.findAll().forEach(feedList::add);
+        ActivityFeed feed = new ActivityFeed();
+        feed.setTransactions(feedList);
+        return feed;
+    }
+
 }
