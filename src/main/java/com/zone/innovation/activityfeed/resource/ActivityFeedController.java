@@ -30,5 +30,12 @@ public class ActivityFeedController {
     public @ResponseBody List<Feed> getFeeds(@PathVariable(name = "customerid") long customerId){
     	List<Feed> feedList = newService.getFeeds(customerId);
     	return feedList;
+    }//
+
+    @GetMapping("/api/activity-feeds")
+    public @ResponseBody List<Feed> getFeeds(){
+        long customerId = 0;
+        List<Feed> feedList = newService.getFeeds(customerId);
+        return feedList;
     }
 }
