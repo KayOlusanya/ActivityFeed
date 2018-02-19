@@ -26,7 +26,13 @@ public class ActivityfeedApplicationTests {
 	}
 
 	@Test
-	public void greetingShouldReturnDefaultMessage() throws Exception {
+	public void requestShouldReturnDefaultMessage() throws Exception {
+		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/activityfeed/1",
+				String.class)).contains("{\"id\":null,\"description\":null,\"customerId\":null,\"transactions\":null}");
+	}
+
+	@Test
+	public void requestShouldReturnStuff() throws Exception {
 		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/activityfeed/1",
 				String.class)).contains("{\"id\":null,\"description\":null,\"customerId\":null,\"transactions\":null}");
 	}
