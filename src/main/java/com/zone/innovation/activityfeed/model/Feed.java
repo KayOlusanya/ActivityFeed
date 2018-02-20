@@ -28,6 +28,8 @@ public class Feed {
 	@JsonProperty("issue-status")
 	private String issueStatus;
 	
+	private String description;
+	
 	public long getId() {
 		return id;
 	}
@@ -75,6 +77,12 @@ public class Feed {
 	}
 	public void setIssueStatus(String issueStatus) {
 		this.issueStatus = issueStatus;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 	
