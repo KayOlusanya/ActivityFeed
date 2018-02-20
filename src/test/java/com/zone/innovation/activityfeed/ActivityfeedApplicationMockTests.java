@@ -40,7 +40,7 @@ public class ActivityfeedApplicationMockTests {
     public void shouldReturnCtivityList() throws Exception {
         this.mockMvc.perform(get("/api/activity-feeds")).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string
-                        (containsString("{\"id\":1,\"timestamp\":null,\"category\":\"category\",\"title\":\"title\",\"alert-type\":\"alert type\"")));
+                        (containsString("{\"id\":1,\"timestamp\":1483228799000,\"category\":\"VISIT\",\"title\":")));
     }
 
 
